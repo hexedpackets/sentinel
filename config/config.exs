@@ -5,12 +5,14 @@ use Mix.Config
 config :tentacat,
   extra_headers: [{"Accept", "pplication/vnd.github.machine-man-preview+json"}]
 
+config :trot, router: Sentinel.Router
+
 config :semantic_sentinel, github_auth: [
   private_key_file: "github_key.pem",
   app_id: 29908,
 ]
 
-config :logger, level: :info
+config :logger, level: :debug
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment

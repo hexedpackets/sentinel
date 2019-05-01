@@ -24,6 +24,8 @@ defmodule Sentinel.MixProject do
     [
       {:tentacat, "~> 1.0"},
       {:joken, "~> 2.0"},
+      {:trot, github: "hexedpackets/trot"},
+      {:plug_cowboy, "~> 1.0"},
     ]
   end
 end

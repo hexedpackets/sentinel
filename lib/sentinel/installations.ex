@@ -31,6 +31,4 @@ defmodule Sentinel.Installations do
     |> response_body()
     |> Map.get("token")
   end
-
-
 end
