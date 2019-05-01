@@ -13,4 +13,16 @@ defmodule Sentinel do
     token = Sentinel.Installations.token(installation)
     Tentacat.Client.new(%{access_token: token})
   end
+
+  def client_for_owner(owner) do
+    owner
+    |> Sentinel.Installations.from_owner()
+    |> List.first()
+    |> Map.get("id")
+    |> client()
+  end
+
+  def client_for_repository(%{"owner" => %{"login" => login}}) do
+    client_for_owner(login)
+  end
 end

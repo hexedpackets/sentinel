@@ -21,6 +21,11 @@ defmodule Sentinel.Installations do
     |> Enum.map(fn %{"id" => id} -> id end)
   end
 
+  def from_owner(owner) do
+    list()
+    |> Enum.filter(fn %{"account" => %{"login" => login}} -> login == owner end)
+  end
+
   @doc """
   Get an access token for a given installation.
   """
