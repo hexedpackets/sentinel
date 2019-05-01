@@ -1,6 +1,6 @@
 # Semantic Sentinel
 
-Enforcer for GitHub pull requests and issues.
+Enforcer for GitHub pull requests and issues. Installs as a GitHub app.
 
 ## Installation
 
